@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="78028f14-f053-4a47-80c7-4175cb52f84e" ChangeDateTime="01/13/2019 21:51:52">
+    <Property Name="ElementName" Value="[dbo].[Unit].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Unit]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UnitId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cecd2a1c-c859-4388-99da-0fa016e92216" ChangeDateTime="01/13/2019 21:52:34">
+    <Property Name="ElementName" Value="[dbo].[LaundryRuns].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LaundryRuns]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LaundryRunId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="221ff5eb-a572-437d-8fe9-f8a2e3ef8966" ChangeDateTime="01/13/2019 22:00:03">
+    <Property Name="ElementName" Value="[dbo].[Supplies].[SupplyType]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Supplies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SupplyTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="063aa37e-b578-427c-9ebd-d0a0fb505476" ChangeDateTime="01/13/2019 22:00:55">
+    <Property Name="ElementName" Value="[dbo].[SupplyType].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SupplyType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SupplyTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6045cd67-2384-4eef-a2df-dd62143f643b" ChangeDateTime="01/13/2019 22:03:26">
+    <Property Name="ElementName" Value="[dbo].[Unit].[TypeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Unit]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UnitTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="37463054-3e25-43fa-84f8-894b4c8832e9" ChangeDateTime="01/13/2019 22:09:04">
+    <Property Name="ElementName" Value="[dbo].[SupplyType].[MaxAmmount]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SupplyType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MaxAmount" />
+  </Operation>
+</Operations>
