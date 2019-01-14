@@ -57,6 +57,8 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="PostDeploy" />
+    <Folder Include="PostDeploy\SystemData" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Unit.sql" />
@@ -67,5 +69,11 @@
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="LaundryDB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostDeploy\postDeploy.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PostDeploy\SystemData\MachineTypes.sql" />
   </ItemGroup>
 </Project>
