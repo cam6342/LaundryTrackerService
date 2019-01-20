@@ -9,9 +9,10 @@ namespace laundry_svc.Models
         public int UnitId { get; set; }
         public DateTime RunStart { get; set; }
         public DateTime? RunEnd { get; set; }
-        public int? Duration { get; set; }
-        public int Status { get; set; }
+        public int? DurationInSeconds { get; set; }
+        public int LaundryStatusId { get; set; }
 
+        public virtual LaundryStatus LaundryStatus { get; set; }
         public virtual Unit Unit { get; set; }
     }
 }

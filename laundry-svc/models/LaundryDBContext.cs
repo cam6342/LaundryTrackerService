@@ -1,5 +1,4 @@
 ﻿using System;
-using laundry_svc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -17,6 +16,7 @@ namespace laundry_svc.Models
         }
 
         public virtual DbSet<LaundryRuns> LaundryRuns { get; set; }
+        public virtual DbSet<LaundryStatus> LaundryStatus { get; set; }
         public virtual DbSet<Supplies> Supplies { get; set; }
         public virtual DbSet<SupplyType> SupplyType { get; set; }
         public virtual DbSet<Unit> Unit { get; set; }
@@ -24,11 +24,6 @@ namespace laundry_svc.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=tcp:laundry-svc.database.windows.net,1433;Initial Catalog=LaundryDB;Persist Security Info=False;User ID=cmarasco;Password=b8V989YBbgac;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -39,17 +34,28 @@ namespace laundry_svc.Models
             {
                 entity.HasKey(e => e.LaundryRunId);
 
-                entity.Property(e => e.LaundryRunId).ValueGeneratedNever();
-
                 entity.Property(e => e.RunEnd).HasColumnType("datetime");
 
                 entity.Property(e => e.RunStart).HasColumnType("datetime");
+
+                entity.HasOne(d => d.LaundryStatus)
+                    .WithMany(p => p.LaundryRuns)
+                    .HasForeignKey(d => d.LaundryStatusId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_LaundryRuns_ToLaundryStatus");
 
                 entity.HasOne(d => d.Unit)
                     .WithMany(p => p.LaundryRuns)
                     .HasForeignKey(d => d.UnitId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_LaundryRuns_ToUnit");
+            });
+
+            modelBuilder.Entity<LaundryStatus>(entity =>
+            {
+                entity.Property(e => e.LaundryStatusId).ValueGeneratedNever();
+
+                entity.Property(e => e.Status).HasMaxLength(50);
             });
 
             modelBuilder.Entity<Supplies>(entity =>

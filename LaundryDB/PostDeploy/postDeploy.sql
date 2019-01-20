@@ -10,3 +10,4 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 :r .\SystemData\MachineTypes.sql
+:r .\SystemData\LaundryStatus.sql
