@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28407.52
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "laundry-svc", "laundry-svc\laundry-svc.csproj", "{94B57701-1B72-4DCA-8E88-FB319C6ED372}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LaundryDB", "LaundryDB\LaundryDB.sqlproj", "{F7143038-EE6D-4845-AFA2-85AFD2866F44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8BE1623B-F3BE-44BF-B85E-86494D66AD58}"
+	ProjectSection(SolutionItems) = preProject
+		motion.py = motion.py
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
